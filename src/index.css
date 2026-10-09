@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bg-deep: #05070d;
+    --color-surface-dark: #0b111e;
+    --color-surface-glass: rgba(14, 22, 38, 0.72);
+    --color-border-cyan: rgba(6, 182, 212, 0.2);
+    --color-neon-cyan: #00f0ff;
+    --color-neon-emerald: #10b981;
+    --color-neon-violet: #8b5cf6;
+  }
+
+  body {
+    background-color: #04060a;
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(8, 14, 26, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(30, 58, 95, 0.8);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.5);
+}
+
+/* Glowing animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+    filter: drop-shadow(0 0 25px rgba(0, 240, 255, 0.45));
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 45px rgba(0, 240, 255, 0.85));
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverseSlow {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes beamScan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spinSlow 24s linear infinite;
+}
+
+.animate-spin-reverse-slow {
+  animation: spinReverseSlow 32s linear infinite;
+}
+
+.animate-float-soft {
+  animation: floatSoft 5s ease-in-out infinite;
+}
+
+.animate-beam-scan {
+  animation: beamScan 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Cybernetic Grid Backdrop */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-radial-vignette {
+  background: radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.09) 0%, rgba(4, 6, 10, 0.95) 75%);
+}

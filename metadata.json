@@ -1,0 +1,6 @@
+{
+  "name": "ASYT Experience — Your AI Consultant",
+  "description": "Découvrez l'autonomie intelligente par la conversation avec le conseiller IA d'ASYT. Démonstrations RAG en direct, diagnostic d'entreprise et propositions personnalisées d'IA locale souveraine.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
